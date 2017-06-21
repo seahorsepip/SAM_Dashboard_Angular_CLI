@@ -1,20 +1,14 @@
-import {User} from "./user";
-export class Group {
+export class User {
     public id: number;
     public name: string;
-    public members: User[];
+    public role: string;
     public chartData: object;
     public increase: number;
 
-    public constructor(id: number, name: string) {
+    public constructor(id: number, name: string, role: string) {
         this.id = id;
         this.name = name;
-        this.members = [
-            new User(23, 'Thomas', 'Web-frontend dashboard'),
-            new User(34, 'Alex', 'Backend/database'),
-            new User(76, 'Thijs', 'Android applicatie'),
-            new User(45, 'Casper', 'Backend')
-        ];
+        this.role = role;
         let date = new Date().getDate();
         let month = new Date().getMonth();
 
@@ -36,13 +30,5 @@ export class Group {
             datasets: [dataset]
         }
         this.increase = Math.floor(Math.random() * 30);
-    }
-
-    public getMemberNames(): string {
-        let names = [];
-        for(let i = 0; i < this.members.length; i++) {
-            names.push(this.members[i].name);
-        }
-        return names.join(", ");
     }
 }

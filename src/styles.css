@@ -1,7 +1,9 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-html,
-body{
+html {
     background: #f6f6f6;
+    overflow-y: scroll;
+}
+body {
     margin: 0;
 }

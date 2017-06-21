@@ -6,20 +6,19 @@ import {GroupListComponent} from "./group-list/group-list.component";
 import {RouterModule, Routes} from "@angular/router";
 import {MdButtonModule, MdCardModule, MdIconModule, MdListModule, MdToolbarModule} from "@angular/material";
 import {ChartModule} from "primeng/primeng";
+import { GroupDetailsComponent } from './group-details/group-details.component';
 
 const appRoutes: Routes = [
     {path: 'groups', component: GroupListComponent},
-    {
-        path: '',
-        redirectTo: '/groups',
-        pathMatch: 'full'
-    }
+    {path: 'group/:id', component: GroupDetailsComponent},
+    {path: '', redirectTo: '/groups', pathMatch: 'full'}
 ];
 
 @NgModule({
     declarations: [
         AppComponent,
-        GroupListComponent
+        GroupListComponent,
+        GroupDetailsComponent
     ],
     imports: [
         BrowserModule,
