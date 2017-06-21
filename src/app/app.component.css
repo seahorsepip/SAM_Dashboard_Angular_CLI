@@ -2,8 +2,8 @@ md-toolbar div {
     width: 820px;
     margin: 0 auto;
 }
-md-toolbar div button {
-    float: right;
+md-toolbar button {
+    margin-left: auto;
 }
 
 md-toolbar md-icon {
@@ -11,10 +11,6 @@ md-toolbar md-icon {
     float: left;
     line-height: 34px;
     margin-right: 8px;
-}
-
-md-toolbar .accountButton {
-    float: right;
 }
 
 section {
