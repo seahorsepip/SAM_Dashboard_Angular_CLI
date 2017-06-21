@@ -1,0 +1,44 @@
+md-toolbar div {
+    width: 820px;
+    margin: 0 auto;
+}
+
+md-toolbar md-icon {
+    display: block;
+    float: left;
+    line-height: 34px;
+    margin-right: 8px;
+}
+
+md-toolbar .accountButton {
+    float: right;
+}
+
+section {
+    width: 876px;
+    margin: 0 auto;
+}
+
+md-card {
+    width: 350px;
+    margin: 20px;
+    float: left;
+}
+
+md-card md-card-content {
+    overflow: hidden;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.chart {
+    width: 380px;
+    float: left;
+}
+
+.members {
+    width: 220px;
+    float: right;
+}
