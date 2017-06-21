@@ -13,7 +13,8 @@ export class Group {
             new User(23, 'Thomas', 'Web-frontend dashboard'),
             new User(34, 'Alex', 'Backend/database'),
             new User(76, 'Thijs', 'Android applicatie'),
-            new User(45, 'Casper', 'Backend')
+            new User(45, 'Casper', 'Backend'),
+            new User(65, 'Hello World!', 'Bot')
         ];
         let date = new Date().getDate();
         let month = new Date().getMonth();
