@@ -2,6 +2,9 @@ md-toolbar div {
     width: 820px;
     margin: 0 auto;
 }
+md-toolbar div button {
+    float: right;
+}
 
 md-toolbar md-icon {
     display: block;
@@ -24,18 +27,8 @@ md-card {
     margin: 20px;
     float: left;
 }
-
-md-card md-card-content {
-    overflow: hidden;
-}
-
-button {
+md-card button {
     margin-top: 20px;
-}
-
-.chart {
-    width: 380px;
-    float: left;
 }
 
 .members {

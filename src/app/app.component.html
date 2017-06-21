@@ -1,12 +1,13 @@
 <md-toolbar color="primary">
     <div>
         <span>Student Activity Monitor Dashboard</span>
-        <span class="accountButton"><md-icon>account_circle</md-icon> Thomas Gladdines</span>
+        <button md-button>UITLOGGEN</button>
     </div>
 </md-toolbar>
 <section>
     <md-card *ngFor="let group of groups">
         <md-card-header>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOc/R8AAjsBnOiGSSgAAAAASUVORK5CYII=" md-card-avatar>
             <md-card-title-group>
                 <span md-card-title>{{group.name}}</span>
                 <span md-card-subtitle>{{group.members.join(", ")}}</span>
@@ -14,26 +15,26 @@
         </md-card-header>
         <md-card-content>
             <h3>Activiteit</h3>
-            <div class="chart">
-                <p-chart type="line" [data]="group.chartData" [options]="chartOptions"></p-chart>
-            </div>
+            <p-chart type="line" [data]="group.chartData" [options]="chartOptions"></p-chart>
             <h3>Feedback</h3>
             <md-list>
                 <md-list-item>
-                    <md-icon>mood</md-icon> <span>Positieve feedback op Thomas</span>
+                    <md-icon md-list-icon>mood</md-icon>
+                    <h3 md-line>Positieve feedback op Thomas</h3>
+                    <p md-line>16/5/17</p>
                 </md-list-item>
-            </md-list>
-            <md-list>
                 <md-list-item>
-                    <md-icon>mood_bad</md-icon> <span>Negatieve feedback op Thijs</span>
+                    <md-icon md-list-icon>mood_bad</md-icon>
+                    <h3 md-line>Negatieve feedback op Thijs</h3>
+                    <p md-line>16/5/17</p>
                 </md-list-item>
-            </md-list>
-            <md-list>
                 <md-list-item>
-                    <md-icon>mood</md-icon> <span>Positieve feedback op Casper</span>
+                    <md-icon md-list-icon>mood</md-icon>
+                    <h3 md-line>Positieve feedback op Casper</h3>
+                    <p md-line>16/5/17</p>
                 </md-list-item>
             </md-list>
-            <button md-button>Meer informatie</button>
+            <button md-raised-button>MEER INFO</button>
         </md-card-content>
     </md-card>
 </section>
