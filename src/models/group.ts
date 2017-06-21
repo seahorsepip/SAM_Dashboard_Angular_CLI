@@ -1,11 +1,13 @@
 import {forEach} from "@angular/router/src/utils/collection";
 export class Group {
+    public id: number;
     public name: String;
     public members: String[];
     public chartData: object;
     public increase: number;
 
-    public constructor(name: String) {
+    public constructor(id: number, name: String) {
+        this.id = id;
         this.name = name;
         this.members = ['Thomas', 'Alex', 'Thijs', 'Casper'];
         let date = new Date().getDate();
