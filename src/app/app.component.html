@@ -1,18 +1,28 @@
 <md-toolbar color="primary">
-        <span>Student Activity Monitor</span>
-        <button md-button><md-icon>account_circle</md-icon>THOMAS GLADDINES</button>
+    <span>Student Activity Monitor</span>
+    <button md-button>
+        <md-icon>account_circle</md-icon>
+        THOMAS GLADDINES
+    </button>
 </md-toolbar>
 <section>
     <md-card *ngFor="let group of groups">
         <md-card-header>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOc/R8AAjsBnOiGSSgAAAAASUVORK5CYII=" md-card-avatar>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOc/R8AAjsBnOiGSSgAAAAASUVORK5CYII="
+                 md-card-avatar>
             <md-card-title-group>
                 <span md-card-title>{{group.name}}</span>
                 <span md-card-subtitle>{{group.members.join(", ")}}</span>
             </md-card-title-group>
         </md-card-header>
         <md-card-content>
-            <h3>Activiteit</h3>
+            <div class="activity-title">
+                <h3>Activiteit</h3>
+                <div class="change">
+                    <h3>+{{group.increase}}%</h3>
+                    <h5>t.o.v. de vorige 7 dagen</h5>
+                </div>
+            </div>
             <p-chart type="line" [data]="group.chartData" [options]="chartOptions"></p-chart>
             <h3>Feedback</h3>
             <md-list>

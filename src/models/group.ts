@@ -3,6 +3,7 @@ export class Group {
     public name: String;
     public members: String[];
     public chartData: object;
+    public increase: number;
 
     public constructor(name: String) {
         this.name = name;
@@ -15,17 +16,18 @@ export class Group {
             fill: false,
             borderColor: 'hsl(200, 80%, 50%)'
         };
-        for (let i = date - 10; i <= date; i++) {
+        for (let i = date - 7; i <= date; i++) {
             dataset.data.push(Math.floor(Math.random() * 10));
         }
 
         let labels = [];
-        for (let i = date - 10; i <= date; i++) {
+        for (let i = date - 7; i <= date; i++) {
             labels.push(i + '/' + month)
         }
         this.chartData = {
             labels: labels,
             datasets: [dataset]
         }
+        this.increase = Math.floor(Math.random() * 30);
     }
 }
