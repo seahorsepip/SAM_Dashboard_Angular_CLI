@@ -25,23 +25,23 @@
             </div>
             <p-chart type="line" [data]="group.chartData" [options]="chartOptions"></p-chart>
             <h3>Feedback</h3>
-            <md-list>
-                <md-list-item>
+            <md-nav-list >
+                <md-list-item  class="md-clickable" md-ink-ripple>
                     <md-icon md-list-icon>mood</md-icon>
                     <h3 md-line>Positieve feedback op Thomas</h3>
                     <p md-line>16/5/17</p>
                 </md-list-item>
-                <md-list-item>
+                <md-list-item md-ink-ripple class="md-clickable">
                     <md-icon md-list-icon>mood_bad</md-icon>
                     <h3 md-line>Negatieve feedback op Thijs</h3>
                     <p md-line>16/5/17</p>
                 </md-list-item>
-                <md-list-item>
+                <md-list-item md-ink-ripple class="md-clickable">
                     <md-icon md-list-icon>mood</md-icon>
                     <h3 md-line>Positieve feedback op Casper</h3>
                     <p md-line>16/5/17</p>
                 </md-list-item>
-            </md-list>
+            </md-nav-list>
             <button md-raised-button>DETAILS</button>
         </md-card-content>
     </md-card>
