@@ -2,6 +2,7 @@ md-toolbar div {
     width: 820px;
     margin: 0 auto;
 }
+
 md-toolbar button {
     margin-left: auto;
 }
@@ -14,15 +15,16 @@ md-toolbar md-icon {
 }
 
 section {
-    width: 876px;
-    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 md-card {
-    width: 350px;
-    margin: 20px;
-    float: left;
+    margin: 10px;
+    width: calc(25% - 68px);
 }
+
 md-card button {
     margin-top: 20px;
 }
@@ -30,4 +32,22 @@ md-card button {
 .members {
     width: 220px;
     float: right;
+}
+
+@media screen and (max-width: 1600px) {
+    md-card {
+        width: calc(33.333% - 68px);
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    md-card {
+        width: calc(50% - 68px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    md-card {
+        width: calc(100% - 68px);
+    }
 }
